@@ -1,0 +1,345 @@
+/* variables para tonso generales */
+:root {
+  --redBasico: #ff1414;
+  --backgroundBasico: #1c1a1a;
+  --textColor: #c9c7c7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* fuentes de google fonts para aplicarlas  */
+/* .bungee-tint-regular {
+  font-family: "Bungee Tint", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+} */
+
+body {
+  background: var(--backgroundBasico);
+  font-family: sans-serif;
+  .conteiner {
+    width: 90%;
+    margin: auto;
+  }
+  header {
+    padding: 15px 0;
+    /* generar sobra color blanco solo abajo de esta contenedor  */
+    box-shadow: 0px 5px 5px rgba(19, 19, 19, 0.8);
+    background-color: var(--backgroundBasico);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    .conteiner {
+      width: 90%;
+      margin: auto;
+    }
+    .conteiner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      a {
+        text-decoration: none;
+      }
+    }
+    .logotipo {
+      font-family: "Bungee Tint", sans-serif;
+      font-weight: normal;
+      color: var(--redBasico);
+      font-size: 2rem;
+      img {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+      }
+    }
+    nav a {
+      color: var(--textColor);
+      text-decoration: none;
+      margin-right: 1rem;
+      font-size: 1rem;
+      font-weight: 500;
+      &:hover {
+        color: var(--redBasico);
+        /* text-decoration: underline;
+        text-decoration-color: var(--redBasico); */
+        /* font-size: 1.3rem; */
+        /* font-weight: 600; */
+        transition: all 0.3s ease-in-out;
+      }
+      &.activo {
+        color: white;
+        text-decoration: underline;
+        text-decoration-color: white;
+        font-size: 1.1rem;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+/* Estilos de pelicula principal */
+.moviePricipal {
+  font-size: 16px;
+  min-height: 40.62em;
+  color: white;
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.5) 50%,
+      rgba(0, 0, 0, 0.8) 99%
+    ),
+    /* Cambiar la imagen de fondo por la que se desee  */
+      url("../recursos/imagenes/fondos/imagen7.webp");
+  /* Ajustar la imagen de fondo al contenedor  */
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  background-size: cover;
+  margin-bottom: 3.12em;
+  display: flex;
+  align-items: end;
+}
+.moviePricipal .conteiner {
+  margin: 0 auto;
+  margin-bottom: 6.25em;
+  width: 90%;
+}
+.moviePricipal .titleMovie {
+  font-weight: 600;
+  font-size: 3.12em;
+  margin-bottom: 0.5em;
+  b {
+    font-weight: 600;
+    font-size: 0.7em;
+    color: var(--redBasico);
+  }
+}
+.moviePricipal .descriptionMovie {
+  font-weight: normal;
+  font-size: 1em;
+  line-height: 1.75em;
+  max-width: 60%;
+  margin-bottom: 1.25em;
+}
+.moviePricipal .btnPrincipal {
+  background: rgba(242, 15, 15, 0.5);
+  border: none;
+  border-radius: 0.31em;
+  padding: 0.93em 1.9em;
+  color: white;
+  margin-right: 1.25em;
+  cursor: pointer;
+  transition: all 0.3s ease all;
+  font-size: 1em;
+  width: 15em;
+  height: 4em;
+  margin-bottom: 0.5em;
+  &:hover {
+    background-color: white;
+    color: var(--redBasico);
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+  }
+  &:active {
+    transform: scale(0.95);
+    transition: all 0.3s ease-in-out;
+  }
+}
+.moviePricipal .conteiner button b {
+  width: 1.5em;
+  height: 2em;
+  margin-right: 1em;
+  font-size: 1.5em;
+}
+/* Conteiner & control principal */
+.conteinerTitleControls {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 1.25em;
+  h3 {
+    color: white;
+    font-size: 1.5em;
+  }
+}
+.conteinerTitleControls .indicadores button {
+  background: white;
+  height: 3px;
+  width: 10px;
+  cursor: pointer;
+  border: none;
+  margin-right: 2px;
+  &:hover {
+    background: var(--redBasico);
+    transform: scale(1.2);
+    transition: all 0.2s ease-in-out;
+  }
+  &.activo {
+    background: var(--redBasico);
+  }
+}
+
+/* carrusel styles */
+.moviesRecommend {
+  margin-bottom: 70px;
+}
+.moviesRecommend .conteinerPrincipal {
+  display: flex; /*los elementos queda horizontales  */
+  align-items: center; /*los elementos quedan centrados verticalmente  */
+  position: relative; /*para que el carrusel funcione  */
+}
+.moviesRecommend .conteinerPrincipal .arrowLeft,
+.moviesRecommend .conteinerPrincipal .arrowRigth {
+  position: absolute;
+  border: none;
+  background: rgba(0, 0, 0, 0.3);
+  font-size: 40px;
+  height: 50%;
+  top: calc(50% - 25%);
+  line-height: 40px;
+  width: 50px;
+  color: white;
+  cursor: pointer;
+  z-index: 500;
+  transition: 0.2s ease all;
+}
+.moviesRecommend .conteinerPrincipal .arrowLeft:hover,
+.moviesRecommend .conteinerPrincipal .arrowRigth:hover {
+  background: rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+  transition: 0.2s ease all;
+}
+.moviesRecommend .conteinerPrincipal .arrowLeft {
+  left: 0;
+  border-radius: 0 5px 5px 0;
+}
+.moviesRecommend .conteinerPrincipal .arrowRigth {
+  right: 0;
+  border-radius: 5px 0 0 5px;
+}
+
+/* carrusel crete styles fir this facture */
+.moviesRecommend .conteinerCorrusel {
+  width: 100%;
+  padding-inline: 20px 0;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+.moviesRecommend .conteinerCorrusel .corrusel {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.moviesRecommend .conteinerCorrusel .corrusel .movie {
+  min-width: 20%;
+  transition: 0.3s ease all;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  /* border-radius: 5px; */
+  img {
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+  }
+}
+.moviesRecommend .conteinerCorrusel .corrusel .movie {
+  position: relative; /* Necesario para posicionar los iconos dentro de la caja */
+  .hover {
+    transform: scale(1.2);
+    transform-origin: center;
+    transition: all 0.3s ease-in-out;
+  }
+}
+.movie b {
+  position: absolute; /* Posiciona los iconos de forma absoluta dentro de la caja */
+  bottom: 10px; /* Ajusta la distancia desde la parte inferior de la caja */
+  left: 80%; /* Centra horizontalmente */
+  transform: translateX(-50%); /* Ajusta el centrado exacto */
+  text-align: center; /* Asegura que el texto esté centrado */
+  font-size: 3rem; /* Ajusta el tamaño de los iconos si es necesario */
+  color: var(--textColor); /* Aplica un color a los iconos */
+  /* separa las dos etiquetas b */
+  &:hover {
+    color: var(--redBasico);
+    /* transform: scale(2.2); */
+    transition: all 0.3s ease-in-out;
+  }
+}
+/* Ocultar el tooltip predeterminado del navegador */
+[title] {
+  position: relative;
+}
+
+[title]::after {
+  content: attr(title); /* Usar el contenido del atributo title */
+  position: absolute;
+  z-index: 9999; /* Asegurarse de que el tooltip esté por encima de otros elementos */
+  bottom: 100%; /* Posicionar el tooltip arriba del elemento */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+  color: white; /* Texto blanco */
+  padding: 5px 10px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+  white-space: nowrap; /* Evitar que el texto se divida en varias líneas */
+  font-size: 0.9rem; /* Tamaño de fuente */
+  opacity: 0; /* Ocultar inicialmente */
+  pointer-events: none; /* Evitar que interfiera con el mouse */
+  transition: opacity 0.3s ease-in-out; /* Transición suave */
+}
+
+[title]:hover::after {
+  opacity: 1; /* Mostrar el tooltip al pasar el mouse */
+}
+
+/* media Queris */
+@media (max-width: 879px) {
+  header .logotipo {
+    margin-bottom: 10px;
+  }
+  header .conteiner {
+    flex-direction: column;
+    align-items: center;
+  }
+  header nav {
+    margin-top: 10px;
+  }
+  header nav a {
+    margin-right: 0;
+    margin-left: 1rem;
+  }
+  .moviePricipal .titleMovie {
+    font-size: 2.5em;
+  }
+  .moviePricipal .descriptionMovie {
+    font-size: 0.9em;
+    max-width: 100%;
+  }
+  .moviePricipal .btnPrincipal {
+    width: 50%;
+    height: 3em;
+    font-size: 0.9em;
+    margin-bottom: 1em;
+  }
+  .movie b {
+    font-size: 2rem;
+  }
+  .moviesRecommend .conteinerCorrusel {
+    overflow: visible;
+  }
+  .moviesRecommend .conteinerCorrusel .corrusel {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .arrowLeft,
+  .indicadores,
+  .arrowRigth {
+    display: none;
+    transition: 0.3s ease all;
+  }
+  .moviesRecommend .conteinerCorrusel .corrusel .movie {
+    min-width: 100%;
+  }
+}
