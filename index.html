@@ -6,10 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="./recursos/iconos/LOGO2 40X40.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/stylesLogin.css">
     <link rel="stylesheet" href="./styles/styles.css">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=play_arrow,0&icon_names=info" />
 
@@ -20,6 +23,64 @@
 </head>
 
 <body>
+    <div class="login">
+        <div class="container-form sign-up">
+            <div class="welcome-back">
+                <div class="message">
+                    <h2>Bienvenido a DaniCodex</h2>
+                    <p>Si ya tienes una cuenta por favor inicia sesion aqui</p>
+                    <button class="sign-up-btn">Iniciar Sesion</button>
+                </div>
+            </div>
+            <form class="formulario">
+                <h2 class="create-account">Crear una cuenta</h2>
+                <div class="iconos">
+                    <div class="border-icon">
+                        <i class='bx bxl-instagram'></i>
+                    </div>
+                    <div class="border-icon">
+                        <i class='bx bxl-linkedin'></i>
+                    </div>
+                    <div class="border-icon">
+                        <i class='bx bxl-facebook-circle'></i>
+                    </div>
+                </div>
+                <p class="cuenta-gratis">Crear una cuenta gratis</p>
+                <input type="text" placeholder="Nombre">
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Contraseña">
+                <input type="button" id="registroBlanco" value="Registrarse">
+            </form>
+        </div>
+        <div class="container-form sign-in">
+            <form class="formulario">
+                <h2 class="create-account">Iniciar Sesion</h2>
+                <div class="iconos">
+                    <div class="border-icon">
+                        <i class='bx bxl-instagram'></i>
+                    </div>
+                    <div class="border-icon">
+                        <i class='bx bxl-linkedin'></i>
+                    </div>
+                    <div class="border-icon">
+                        <i class='bx bxl-facebook-circle'></i>
+                    </div>
+                </div>
+                <p class="cuenta-gratis">¿Aun no tienes una cuenta?</p>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Contraseña" required>
+                <input type="button" id="inicioBlanco" value="Iniciar Sesion">
+            </form>
+            <div class="welcome-back">
+                <div class="message">
+                    <h2>Bienvenido de nuevo</h2>
+                    <p>Si aun no tienes una cuenta por favor registrese aqui</p>
+                    <!-- boton para registarse -->
+                    <button class="sign-in-btn">Registrarse</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <header>
         <div class="conteiner">
             <a href="./index.html">
@@ -28,7 +89,7 @@
                     DaliMovies</h2>
             </a>
             <nav>
-                <a href="#" alt="link_" class="activo">Inicio</a>
+                <a href="#" alt="link_" class="activo" id="InicoSesion">Inicio</a>
                 <a href="#" alt="link_" class="">Programas</a>
                 <a href="#" alt="link_" class="">Peliculas</a>
                 <a href="#" alt="link_" class="">Series</a>
@@ -180,8 +241,12 @@
                 <button role="button" id="arrowRigth" class="arrowRigth">&#x02771</button>
             </div>
         </div>
-
+        <!-- login para registro  -->
     </main>
+    <!-- Genero la parte del singIn singUp -->
+
+
+    <script src="./script/mainLogin.js"></script>
     <script src="./script/main.js"></script>
 </body>
 
