@@ -94,13 +94,14 @@ body {
     /* Cambiar la imagen de fondo por la que se desee  */
       url("../recursos/imagenes/fondos/imagen7.webp");
   /* Ajustar la imagen de fondo al contenedor  */
-  background-position: center center;
+  background-position: top center;
   background-repeat: no-repeat;
   position: relative;
   background-size: cover;
   margin-bottom: 3.12em;
   display: flex;
   align-items: end;
+  transition: all 0.3s ease-in-out;
 }
 .moviePricipal .conteiner {
   margin: 0 auto;
