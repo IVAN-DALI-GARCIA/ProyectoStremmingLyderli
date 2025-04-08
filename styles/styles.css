@@ -174,7 +174,7 @@ body {
   border: none;
   margin-right: 2px;
   &:hover {
-    background: var(--redBasico);
+    /* background: var(--redBasico); */
     transform: scale(1.2);
     transition: all 0.2s ease-in-out;
   }
