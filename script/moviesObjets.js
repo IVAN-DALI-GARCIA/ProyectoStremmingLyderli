@@ -162,6 +162,8 @@ let movies = [
   moana,
 ];
 
+let moviesFavoritos = [];
+
 // funcion para colorar la pelicula principal
 
 function moviePrincipal() {
