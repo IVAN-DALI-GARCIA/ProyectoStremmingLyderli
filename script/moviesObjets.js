@@ -190,6 +190,29 @@ function moviePrincipal() {
     `;
 }
 // Agrega una animacion para que el contendor de la pelicula principal se vea mas atractivo
-
 moviePrincipal();
 setInterval(moviePrincipal, 6000);
+
+// agrega la lista de peliculas de forma dinamica al carrusel de peliculas
+
+function addMoviesCarrusel() {
+  let carrusel = document.querySelector(".corrusel");
+  // borra el contenido anterior
+  carrusel.innerHTML = "";
+  // A partir del array de peliculas, genera un ciclo para que se agregen las peliculas al carrusel
+  for (let i = 0; i < 3; i++) {
+    movies.forEach((movie) => {
+      carrusel.innerHTML += `
+    <div class="movie" id="movie${movie}">
+        <b title="Agregar favoritos">&#x02661</b>
+        <a href="#">
+            <!-- <b>&#x02139 </b> -->
+            <!-- <b>&#x02729</b> -->
+            <img src="${movie.link}" alt="${movie.name}" class="imgMovie" id="imgMovie">
+        </a>
+    </div>
+    `;
+    });
+  }
+}
+addMoviesCarrusel();
